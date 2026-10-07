@@ -1,0 +1,52 @@
+.show-ideas-view {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 var(--lumo-space-l);
+}
+
+.show-ideas-view vaadin-grid-pro {
+  height: 100%;
+}
+
+.show-ideas-view vaadin-grid-filter,
+.show-ideas-view vaadin-grid-filter > * {
+  width: 100%;
+}
+
+.show-ideas-view vaadin-grid-pro vaadin-horizontal-layout {
+  align-items: center;
+}
+
+.show-ideas-view vaadin-grid-pro img {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: var(--lumo-size-m);
+  width: var(--lumo-size-m);
+}
+
+.show-ideas-view .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.show-ideas-view .idea-filter-bar {
+  gap: var(--lumo-space-m);
+  width: 100%;
+}
+
+.show-ideas-view .idea-filter-bar vaadin-text-field,
+.show-ideas-view .idea-filter-bar vaadin-combo-box,
+.show-ideas-view .idea-filter-bar vaadin-big-decimal-field {
+  min-width: 170px;
+  flex: 1 1 170px;
+}
+
+.show-ideas-view .filter-reset-button {
+  margin-bottom: 1px;
+}
+
+.show-ideas-view vaadin-grid {
+  min-height: 420px;
+}

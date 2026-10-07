@@ -1,0 +1,152 @@
+
+
+html:not([theme~="dark"]) {
+  --app-bg-color: #fff7ed;
+  --app-card-color: #ffffff;
+  --app-header-color: #ff8c00;
+  --app-header-text-color: white;
+  --app-selected-bg: #fff0dc;
+  --app-selected-text: #cc6a00;
+
+  --app-dialog-border: #ff8c00;
+  --app-dialog-glow: rgba(255, 140, 0, 0.35);
+  --app-dialog-backdrop: rgba(0, 0, 0, 0.25);
+
+  --lumo-primary-color: #ff8c00;
+  --lumo-primary-text-color: #cc6a00;
+  --lumo-body-text-color: #1f2937;
+  --lumo-base-color: #ffffff;
+}
+
+html[theme~="dark"] {
+  --app-bg-color: #061632;
+  --app-card-color: #0b244f;
+  --app-header-color: #071a3d;
+  --app-header-text-color: white;
+  --app-selected-bg: #102a5c;
+  --app-selected-text: #ffffff;
+
+  --app-dialog-border: #60a5fa;
+  --app-dialog-glow: rgba(96, 165, 250, 0.55);
+  --app-dialog-backdrop: rgba(0, 0, 0, 0.55);
+
+  --lumo-primary-color: #1d4ed8;
+  --lumo-primary-text-color: #93c5fd;
+  --lumo-body-text-color: #f4f7ff;
+  --lumo-base-color: #0b244f;
+}
+
+#header {
+  height: var(--lumo-size-xl);
+  box-shadow: var(--lumo-box-shadow-s);
+  background-color: var(--app-header-color);
+  color: var(--app-header-text-color);
+}
+#header vaadin-avatar {
+  margin-left: auto;
+  margin-right: var(--lumo-space-m);
+}
+vaadin-app-layout[dir='rtl'] #header vaadin-avatar {
+  margin-left: var(--lumo-space-m);
+  margin-right: auto;
+}
+#header h1 {
+  font-size: var(--lumo-font-size-l);
+  margin: 0;
+  color: var(--app-header-text-color);
+}
+#logo {
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--lumo-size-xl);
+  box-shadow: inset 0 -1px var(--lumo-contrast-10pct);
+  padding: var(--lumo-space-s) var(--lumo-space-m);
+}
+#logo img {
+  max-height: 100%;
+}
+#logo h1 {
+  font-size: var(--lumo-font-size-xl);
+  font-weight: 600;
+  margin: 0 var(--lumo-space-s);
+  color: var(--lumo-body-text-color);
+}
+
+vaadin-tab {
+  font-size: var(--lumo-font-size-s);
+  height: var(--lumo-size-l);
+  font-weight: 600;
+  color: var(--lumo-body-text-color);
+}
+
+vaadin-tab:hover {
+  background-color: var(--lumo-contrast-10pct);
+
+}
+
+vaadin-tab[selected] {
+  background-color: var(--app-selected-bg);
+  color: var(--app-selected-text);
+}
+
+#theme-toggle {
+  min-width: 42px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.auth-view {
+  min-height: 100vh;
+  background-color: var(--app-bg-color);
+  color: var(--lumo-body-text-color);
+  padding-top: var(--lumo-space-xl);
+}
+
+.auth-view vaadin-login-form,
+.auth-view vaadin-form-layout {
+  background-color: var(--app-card-color);
+  color: var(--lumo-body-text-color);
+  border-radius: 16px;
+  padding: var(--lumo-space-l);
+  box-shadow: var(--lumo-box-shadow-m);
+}
+
+
+
+vaadin-dialog-overlay[theme~="idea-details-dialog"]::part(backdrop) {
+  background-color: var(--app-dialog-backdrop);
+  backdrop-filter: blur(3px);
+}
+
+vaadin-dialog-overlay[theme~="idea-details-dialog"]::part(overlay) {
+  border: 3px solid var(--app-dialog-border);
+  outline: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow:
+          0 0 0 6px var(--app-dialog-glow),
+          0 24px 70px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+}
+
+
+vaadin-dialog-overlay[theme~="idea-details-dialog"]::part(header) {
+  background-color: var(--app-header-color);
+  color: var(--app-header-text-color);
+  border-radius: 14px 14px 0 0;
+}
+
+vaadin-dialog-overlay[theme~="idea-details-dialog"]::part(content) {
+  background-color: var(--app-card-color);
+  color: var(--lumo-body-text-color);
+}
+
+vaadin-dialog-overlay[theme~="idea-details-dialog"]::part(footer) {
+  background-color: var(--app-card-color);
+  border-top: 1px solid var(--lumo-contrast-20pct);
+}
+
+html[theme~="dark"] vaadin-dialog-overlay vaadin-text-field {
+  color: #111827;
+  --vaadin-input-field-value-color: #111827;
+  --vaadin-input-field-placeholder-color: #64748b;
+}
