@@ -1,4 +1,4 @@
-# GoTaigas
+# GoTaiGas
 
 GoTaigas is a web-based application for managing and presenting startup ideas. Students can create and manage their own ideas, while investors can browse existing ideas and search for suitable projects.
 
