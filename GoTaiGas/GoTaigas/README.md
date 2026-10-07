@@ -1,4 +1,4 @@
-# GoTaigas
+# GoTaiGas (German)
 
 GoTaigas ist eine webbasierte Anwendung zur Verwaltung und Präsentation von Gründungsideen. Studierende können eigene Ideen erstellen und verwalten, während Investoren vorhandene Ideen ansehen und nach passenden Projekten suchen können.
 
